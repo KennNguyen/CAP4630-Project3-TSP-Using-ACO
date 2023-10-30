@@ -1,5 +1,5 @@
 from typing import Optional
-import genetic_tsp
+import aco
 import random
 from matplotlib import pyplot as plt
 
@@ -47,15 +47,15 @@ def hash_city_name(n: int) -> str:
 
     return name
 
-def print_cities(cities: list[genetic_tsp.City]) -> None:
+def print_cities(cities: list[aco.City]) -> None:
     print("{:6}\t{:>6}\t{:>6}".format("City", "X", "Y"))
 
     for city in cities:
         print("{:6}\t{:>6.2f}\t{:>6.2f}".format(city[0],city[1],city[2]))
 
-def generate_random_cities(count: int) -> list[genetic_tsp.City]:
+def generate_random_cities(count: int) -> list[aco.City]:
     """Returns initialized list of random cities."""
-    cities: list[genetic_tsp.City] = []
+    cities: list[aco.City] = []
     max_x_axis = 200
     max_y_axis = 200
 
@@ -63,18 +63,27 @@ def generate_random_cities(count: int) -> list[genetic_tsp.City]:
         city_name = hash_city_name(i)
         x = random.uniform(0, max_x_axis)
         y = random.uniform(0, max_y_axis)
-        cities.append((city_name, x, y))
+        cities.append((city_name, x, y, p))
 
     return cities
 
-def plot_route(route: genetic_tsp.Route) -> None:
+def generate_edges(cities: list[aco.City]) -> list[aco.Edge]:
+    edges: list[aco.Edge] = []
+    for city_a in cities:
+        for city_b in cities:
+            if (city_a != city_b):
+                edges.append((city_a, city_b, 1))
+    return edges
+                
+
+def plot_route(route: aco.Route) -> None:
     x = [point[1] for point in route]
     y = [point[2] for point in route]
 
     plt.scatter(x, y, color="red", label="Cities")
     plt.plot(x + [x[0]], y + [y[0]], color="blue", linestyle="dashed", linewidth=1)
 
-def plot_cities(cities: list[genetic_tsp.City]) -> None:
+def plot_cities(cities: list[aco.City]) -> None:
     x = [city[1] for city in cities]
     y = [city[2] for city in cities]
 
