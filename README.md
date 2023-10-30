@@ -13,12 +13,12 @@ RHS: The pheromone level on the path from city 'x' to city 'y' times the attract
 Parameters: 'a' and 'b' control the relative importance of the pheromone level and the attractiveness, respectively.
 
 $$\textbf{Pheromone Update Rule Formula}$$
-$$\tau_{xy}\leftarrow(1-\rho)\tau_{xy}\;+\;\sum_{k}\Delta\tau^{k}_{xy}$$
+![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/PDF.png)
 LHS: The amount of pheromone on an edge on that given x-coordinate and y-coordinate.
 RHS: $\rho$ represents rate of pheromone evaporation. So given the rate of pheromone evaporation multiplied by the amount of pheromone on that given edge with the addition of the amount of pheromone left on that edge represented by $\Delta\tau^{k}_{xy}$.
 
 $$\textbf{Pheromone Deposit Calculation in Ant Colony Optimization}$$
-$$\Delta\tau^{k}_{xy}\;=\;\begin{cases}\frac{Q}{L_{k}}\;if\;ant\;k\;uses\;edge\;xy\;in\;its\;tour\\0\;\;\;\;\;\;\;\;otherwise\end{cases}$$
+![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/PUR.png)
 LHS: The change in amount of pheromone left on that edge on that given x-coordinate and y-coordinate.
 RHS: Q is the pheromone deposit factor divided by L is the cost of the ant tour length.
 
