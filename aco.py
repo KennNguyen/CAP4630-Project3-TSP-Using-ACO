@@ -28,11 +28,30 @@ pheromones = np.ones((N, N)) * INITIAL_PHEROMONE
 # Ant class
 class Ant:
   def __init__(self):
-    self.route = random.sample(range(N), N)
+    self.reset()
+
+  def reset(self):
+    self.route = [random.randint(0, N - 1)]
     self.distance = 0.0
 
+  def select_next_city(self):
+    current_city = self.route[-1]
+    choices = list(set(range(N)) - set(self.route))
+    probabilities = []
+
+    for choice in choices:
+      tau = pheromones[current_city][choice] ** ALPHA
+      eta = (1 / distances[current_city][choice]) ** BETA
+      probabilities.append(tau * eta)
+
+    probabilities = np.array(probabilities)
+    probabilities /= probabilities.sum()
+
+    next_city = np.random.choice(choices, p=probabilities)
+    self.route.append(next_city)
+
   def calculate_distance(self):
-    self.distance = sum(distances[self.route[i-1]][self.route[i]] for i in range(N))
+    self.distance = sum(distances[self.route[i-1]][self.route[i]] for i in range(1, N))
 
 # Initialize ant population
 ants = [Ant() for _ in range(N)]
@@ -42,18 +61,18 @@ best_route = []
 best_distance = float('inf')
 
 for iteration in range(ITERATIONS):
-  # Ant logic
   for ant in ants:
+    ant.reset()
+    for _ in range(N - 1):
+      ant.select_next_city()
     ant.calculate_distance()
+
     if ant.distance < best_distance:
       best_distance = ant.distance
       best_route = ant.route[:]
 
   # Pheromone update
-  for i in range(N):
-    for j in range(N):
-      pheromones[i][j] *= EVAPORATION
-
+  pheromones *= EVAPORATION
   for ant in ants:
     for i in range(N - 1):
       pheromones[ant.route[i]][ant.route[i+1]] += 1 / ant.distance
