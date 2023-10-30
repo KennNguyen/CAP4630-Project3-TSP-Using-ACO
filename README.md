@@ -22,14 +22,14 @@ Parameters: 'a' and 'b' control the relative importance of the pheromone level a
 
 $$\textbf{Pheromone Update Rule Formula}$$
 
-![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/PDF.png)
+![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/PDF.PNG)
 
 LHS: The amount of pheromone on an edge on that given x-coordinate and y-coordinate.
 RHS: $\rho$ represents rate of pheromone evaporation. So given the rate of pheromone evaporation multiplied by the amount of pheromone on that given edge with the addition of the amount of pheromone left on that edge represented by $\Delta\tau^{k}_{xy}$.
 
 $$\textbf{Pheromone Deposit Calculation in Ant Colony Optimization}$$
 
-![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/PUR.png)
+![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/PUR.PNG)
 
 LHS: The change in amount of pheromone left on that edge on that given x-coordinate and y-coordinate.
 RHS: Q is the pheromone deposit factor divided by L is the cost of the ant tour length.
