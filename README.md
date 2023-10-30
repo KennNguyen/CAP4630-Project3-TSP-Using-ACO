@@ -2,6 +2,8 @@
 
 In this project, swarm intelligence aka Ant Colony Optimization algorithm is used to solve the Traveling Salesman Problem.
 
+✨ [Colab Link](https://colab.research.google.com/drive/1AMGKd-0ByVzfIVtxJmKWMqSyIRe5tq3n?usp=sharing) ✨
+
 ## Authors
 
 * **[Kenneth Nguyen](https://github.com/KennNguyen/)** (Reporter)
