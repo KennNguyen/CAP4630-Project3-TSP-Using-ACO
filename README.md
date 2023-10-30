@@ -51,3 +51,17 @@ $$\textbf{Implementation}$$
 		End While
 	End
 ```
+
+$$\textbf{Report}$$
+Team : Yurixander Ricardo Silva, Zee Fisher, Kenneth Nguyen
+
+With our knowledge of the travelling salesman problem with genetic algorithm, we were able to have a better grasp of the problem and its requirement and restraints. For example, we understood that visiting each node exactly once to minimize the total distance travelled. Moreover, we were able to reuse the encoding due to it being the same problem. In addition, with the experience from genetic algorithm, we were able to approach parameter tuning for ant colony optimization on better grounds. Furthermore, with experimentation in the genetic algorithm, we were able to use the same methodology when evaluating the ant colony optimization's performance.
+
+How were the cities and distances represented (as a data structure)? : Cities are represented as tuples in which it contains 'x' and 'y' coordinates of the cities, while the Euclidean distance is contained in a 2D array.
+• How did you encode the solution space? : Each of the ant's routes is encoded in a list on indices in the order of the cities visited.
+• How did you handle the creation of the initial ant population? : The initial population of the ants was created by instantiating 'N' Ant objects.
+• How did you handle the updating of the pheromone trails? : After each iteration, the pheromones levels on all edges evaporates by multiplying with the evaporation rate and then the ants deposits pheromones on the edge its traversing with the amount that is inversely proportional to the distance of its route.
+• Which strategy(ies) did you use to compute the best solution? : The best solution is computed by having the distance be updated with the shortest distance recorded when the ant completes its route.
+• Which stopping condition did you use? Why? : The stopping condition we went with is to have it run a fixed number of iterations due to simplicity and predictability on the runtime. 
+• What other parameters, design choices, initialization and configuration steps are relevant to your design and implementation? : The implementation of parameters 'A' and 'B' to control the influence of the pheromone level and the use of inverse distance for the probability of selecting the next city.
+• Which (simple) experiments have you run to observe the impact of different design decisions and parameter values? Post their results and your comments.
