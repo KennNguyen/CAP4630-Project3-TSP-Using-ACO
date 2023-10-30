@@ -14,7 +14,7 @@ Ant Colony Optimization is a probabilistic technique for finding optimal paths. 
 
 $$\textbf{Edge Selection Formula}$$
 
-![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/ESF.png)
+![Edge Selection Formula](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/ESF.PNG)
 
 LHS: The probability of ant 'k' will move from city 'x' to city 'y.'
 RHS: The pheromone level on the path from city 'x' to city 'y' times the attractiveness of the path from city 'x' to city 'y' divided by the sum over all cities 'z' that are allowed to be visited from city 'y'. The denominator normalizes the probability so that the sum of probabilities of moving from city 'x' to all allowed cities 'y' is 1.
