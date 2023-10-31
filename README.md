@@ -79,9 +79,9 @@ Future improvements can include ways of implementing min max ant colony optimiza
 
 $$\textbf{References}$$
 
-M. Dorigo et L.M. Gambardella, Ant Colony System : A Cooperative Learning Approach to the Traveling Salesman Problem, IEEE Transactions on Evolutionary Computation, volume 1, numéro 1, pages 53-66, 1997.
-T. Stützle et H.H. Hoos, MAX MIN Ant System, Future Generation Computer Systems, volume 16, pages 889-914, 2000
-Chu S C, Roddick J F, Pan J S. Ant colony system with communication strategies[J]. Information sciences, 2004, 167(1-4): 63-76.
+* M. Dorigo et L.M. Gambardella, Ant Colony System : A Cooperative Learning Approach to the Traveling Salesman Problem, IEEE Transactions on Evolutionary Computation, volume 1, numéro 1, pages 53-66, 1997.
+* T. Stützle et H.H. Hoos, MAX MIN Ant System, Future Generation Computer Systems, volume 16, pages 889-914, 2000
+* Chu S C, Roddick J F, Pan J S. Ant colony system with communication strategies[J]. Information sciences, 2004, 167(1-4): 63-76.
 
 ## Photos
 
