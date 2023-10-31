@@ -73,9 +73,9 @@ With our knowledge of the travelling salesman problem with genetic algorithm, we
 
 $\textbf{Original Graph}$
 
-![Original Graph](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/Original.PNG)
+![Original Graph](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/Original.png)
 
 $\textbf{Improved Graph}$
 
 
-![Improved Graph](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/Improved.PNG)
+![Improved Graph](https://raw.githubusercontent.com/KennNguyen/CAP4630-Project3-TSP-Using-ACO/main/images/Improved.png)
