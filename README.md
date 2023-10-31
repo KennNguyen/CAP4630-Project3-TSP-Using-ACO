@@ -67,4 +67,10 @@ With our knowledge of the travelling salesman problem with genetic algorithm, we
 * Which strategy(ies) did you use to compute the best solution? : The best solution is computed by having the distance be updated with the shortest distance recorded when the ant completes its route.
 * Which stopping condition did you use? Why? : The stopping condition we went with is to have it run a fixed number of iterations due to simplicity and predictability on the runtime. 
 * What other parameters, design choices, initialization and configuration steps are relevant to your design and implementation? : The implementation of parameters 'A' and 'B' to control the influence of the pheromone level and the use of inverse distance for the probability of selecting the next city.
-* Which (simple) experiments have you run to observe the impact of different design decisions and parameter values? Post their results and your comments.
+* Which (simple) experiments have you run to observe the impact of different design decisions and parameter values? Post their results and your comments. : During the design process, we tested the progress of our algorithms by altering the variables: N, ITERATIONS, ALPHA, BETA, EVAPORATION, INITIAL_PHEROMONE, SEED to test the effectiveness of our algorithm. We found that at first, the algorithm produced bad solutions. After adjusting the ant class and the way they choose their next city on a route, we fixed the issue and were able to produce routes within our desired solutions.
+
+## Photos
+
+$\textbf{Original Graph}$
+
+$\textbf{Improved Graph}$
