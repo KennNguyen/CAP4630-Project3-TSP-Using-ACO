@@ -73,6 +73,16 @@ $$\textbf{Work Report}$$
 
 Kenneth gathered the information in regarding the Ant Colony Optimization. With the information gathered from Kenneth's research, Yurixander was able to design and build a program that solves the travelling salesman problem via ant colony optimization. It was originally made in a code editor, but Zee converted it into Google's colab as well as provide the necessary information within the colab and run various experiments with the program.
 
+$$\textbf{Future Improvements}$$
+
+Future improvements can include ways of implementing min max ant colony optimization in which in pheromone trails are bounded by a minimum and maximum value to prevent excessive accumulation of pheromone and help avoid premature convergence, ant colony system which introduces a local pheromone update rule, where pheromones are updated during the construction of the tour by each ant, or parallelization which optimizes the code for parallel execution to allow multiple ants to search simultaneously, thereby speeding up the optimization process.
+
+$$\textbf{References}$$
+
+M. Dorigo et L.M. Gambardella, Ant Colony System : A Cooperative Learning Approach to the Traveling Salesman Problem, IEEE Transactions on Evolutionary Computation, volume 1, numéro 1, pages 53-66, 1997.
+T. Stützle et H.H. Hoos, MAX MIN Ant System, Future Generation Computer Systems, volume 16, pages 889-914, 2000
+Chu S C, Roddick J F, Pan J S. Ant colony system with communication strategies[J]. Information sciences, 2004, 167(1-4): 63-76.
+
 ## Photos
 
 $\textbf{Original Graph}$
